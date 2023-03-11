@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'welcome_screen.dart';
 import 'login_screen.dart';
@@ -5,6 +6,8 @@ import 'registration_screen.dart';
 import 'chat_screen.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  Firebase.initializeApp();
   runApp(const FlashChat());
 }
 
